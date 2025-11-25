@@ -6,20 +6,20 @@ on:
       - "main"
       - "master"
 
-    pull_request:
-      types:
-        - opened
-      branches:
-        - main
+  pull_request:
+    types:
+      - opened
+    branches:
+      - main
 
-    workflow_call:
-      inputs:
-        username:
-          type: string
-          default: "Umit"
+  workflow_call:
+    inputs:
+      username:
+        type: string
+        default: "Umit"
 
 
-    workflow_dispatch:
+  workflow_dispatch:
       inputs:
         username:
           type: string
