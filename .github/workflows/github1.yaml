@@ -10,21 +10,20 @@ on:
       types:
         - opened
       branches:
-        - 'main'
+        - main
 
     workflow_call:
       inputs:
         username:
           type: string
           default: "Umit"
-          required: false
+
 
     workflow_dispatch:
       inputs:
         username:
           type: string
           default: "Umit"
-          required: false
           
 jobs:
   job1:
