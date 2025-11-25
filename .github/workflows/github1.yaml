@@ -6,9 +6,9 @@ on:
       - "main"
       - "master"
 
-    pull_requests:
+    pull_request:
       types:
-        - open
+        - opened
       branches:
         - 'main'
 
