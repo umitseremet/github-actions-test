@@ -1,0 +1,38 @@
+name: Github Actions Test
+
+on: 
+  push:
+    branches: 
+      - "main"
+      - "master"
+
+    pull_requests:
+      types:
+        - open
+      branches:
+        - 'main'
+
+    workflow_call:
+      inputs:
+        username:
+          type: string
+          default: "Umit"
+          required: false
+
+    workflow_dispatch:
+      inputs:
+        username:
+          type: string
+          default: "Umit"
+          required: false
+          
+jobs:
+  job1:
+    name: Job1
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Step1
+        run: "uname -a"
+      - name: Step2
+        run: "uptime"
