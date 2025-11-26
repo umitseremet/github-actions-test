@@ -59,10 +59,13 @@ jobs:
 
     steps:
       - name: Step1
+        id: Step1
         run: "uname -a"
       - name: Step2
         run: "uptime"
+        id: Step2
       - name: Step3
+        id: Step3
         run: |
           echo "name2: ${{ env.name2 }}"
           echo "name0: $name0"
