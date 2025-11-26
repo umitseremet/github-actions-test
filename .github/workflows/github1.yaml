@@ -53,7 +53,7 @@ jobs:
     needs: job1
     outputs:
       last_name1: seremet1
-      last_name2: seremet2
+      last_name2: ${{ steps.Step3.outputs.last_name2 }}
     env:
       name2: Umit2
 
