@@ -46,9 +46,7 @@ jobs:
           echo "name1: ${{ env.name1}}"
           echo $name1
           echo $name0
-
-
-  jobs:
+          
   job2:
     name: Job2
     runs-on: ubuntu-latest
