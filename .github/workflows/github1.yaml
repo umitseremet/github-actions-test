@@ -68,5 +68,5 @@ jobs:
           echo "name0: $name0"
           echo "USERNAME0: ${{ inputs.username0 }}"
           echo "USERNAME1: ${{ inputs.username1 }}" 
-          echo "last_name2=seremet2" >> $GITHUB_OUTPUT"    
+          echo "last_name2=seremet2" >> $GITHUB_OUTPUT    
 
