@@ -14,14 +14,14 @@ on:
 
   workflow_call:
     inputs:
-      username:
+      username0:
         type: string
         default: "Umit"
 
 
   workflow_dispatch:
       inputs:
-        username:
+        username1:
           type: string
           default: "Umit"
 
@@ -60,7 +60,8 @@ jobs:
         run: "uptime"
       - name: Step3
         run: |
-          echo "name2: ${{ env.name2}}"
+          echo "name2: ${{ env.name2 }}"
           echo "name0: $name0"
-          echo "USERNAME: ${{ inputs.username }}"       
+          echo "USERNAME0: ${{ inputs.username0 }}"
+          echo "USERNAME1: ${{ inputs.username1 }}"     
 
