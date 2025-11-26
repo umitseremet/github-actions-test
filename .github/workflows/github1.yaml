@@ -24,14 +24,25 @@ on:
         username:
           type: string
           default: "Umit"
-          
+
+env:
+  name0: Umit0
+  
+  
 jobs:
   job1:
     name: Job1
     runs-on: ubuntu-latest
+    env:
+      name1: Umit1
 
     steps:
       - name: Step1
         run: "uname -a"
       - name: Step2
         run: "uptime"
+      - name: Step3
+        run: |
+          "echo $name1"
+          "echo ${{ env.name1}}"
+
