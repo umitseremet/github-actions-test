@@ -44,4 +44,6 @@ jobs:
       - name: Step3
         run: |
           echo "name1: ${{ env.name1}}"
+          echo $name1
+          echo $name0
 
