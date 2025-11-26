@@ -89,4 +89,5 @@ jobs:
         run: |
           echo "name1: ${{ env.name0 }}"
           echo "name3: ${{ env.name3 }}"
-          echo "last_name: ${{ needs.job2.outputs.last_name2 }}"
+          echo "last_name1: ${{ needs.job2.outputs.last_name1 }}"
+          echo "last_name2: ${{ needs.job2.outputs.last_name2 }}"
