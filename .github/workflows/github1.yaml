@@ -62,5 +62,5 @@ jobs:
         run: |
           echo "name2: ${{ env.name2}}"
           echo "name0: $name0"
-          echo "USERNAME: {{ input.username }}"       
+          echo "USERNAME: {{ inputs.username }}"       
 
