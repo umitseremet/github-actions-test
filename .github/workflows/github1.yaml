@@ -71,5 +71,22 @@ jobs:
           echo "name0: $name0"
           echo "USERNAME0: ${{ inputs.username0 }}"
           echo "USERNAME1: ${{ inputs.username1 }}" 
-          echo "last_name2=seremet2" >> $GITHUB_OUTPUT    
+          echo "last_name2=seremet2" >> $GITHUB_OUTPUT
 
+  job3:
+    name: Job3
+    runs-on: ubuntu-latest
+    needs: job2
+    env:
+      name3: Umit3
+
+    steps:
+      - name: Step1
+        run: "uname -a"
+      - name: Step2
+        run: "uptime"
+      - name: Step3
+        run: |
+          echo "name1: ${{ env.name0 }}"
+          echo "name3: ${{ env.name3 }}"
+          echo "last_name: ${{ needs.job2.outputs.last_name2 }}"
