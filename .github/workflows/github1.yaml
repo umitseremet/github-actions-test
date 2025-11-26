@@ -47,3 +47,22 @@ jobs:
           echo $name1
           echo $name0
 
+
+  jobs:
+  job2:
+    name: Job2
+    runs-on: ubuntu-latest
+    env:
+      name2: Umit2
+
+    steps:
+      - name: Step1
+        run: "uname -a"
+      - name: Step2
+        run: "uptime"
+      - name: Step3
+        run: |
+          echo "name2: ${{ env.name2}}"
+          echo "name2: $name2
+          echo $name0         
+
