@@ -50,7 +50,7 @@ jobs:
     uses: ./.github/workflows/actions/action1.yaml
 
   job5:
-    name: job4
+    name: job5
     needs: job4
     uses: ./.github/workflows/actions/action2.yaml
    
