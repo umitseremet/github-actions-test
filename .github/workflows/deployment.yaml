@@ -36,8 +36,6 @@ jobs:
     needs: job1
     runs-on: ubuntu-latest
     steps:
-      - name: CodeCheckOut
-        uses: actions/checkout@v4
       - name: "BeforeAction2"
         run: echo  "BeforeAction"
       - name: ActionForCodeCheckOut
