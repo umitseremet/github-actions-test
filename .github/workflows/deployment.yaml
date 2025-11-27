@@ -30,8 +30,10 @@ jobs:
     uses: ./.github/workflows/reusable.yaml
     with:
         var1: "Umit Seremet"
+
   job3:
     name: job3
+    needs: job1
     runs-on: ubuntu-latest
     steps:
       - name: "BeforeAction2"
