@@ -34,9 +34,9 @@ jobs:
     name: job3
     runs-on: ubuntu-latest
     steps:
-      - name: "BeforeAction1"
+      - name: "BeforeAction2"
         run: echo  "BeforeAction"
       - name: ActionForCodeCheckOut
-        uses: umitseremet/github-actions-test/.github/actions/action1@main
-      - name: "AfterAction1"
-        uses: umitseremet/github-actions-test/.github/actions/action2@main  
+        uses: umitseremet/github-actions-test/.github/actions/action2@main
+      - name: "AfterAction2"
+        uses: umitseremet/github-actions-test/.github/actions/action1@main  
