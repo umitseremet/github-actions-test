@@ -48,9 +48,13 @@ jobs:
     name: job4
     needs: job3
     uses: umitseremet/github-actions-test/.github/workflows/reusable.yaml@main
+    with:
+        var1: "Rana Seremet"
 
   job5:
     name: job5
     needs: job4
     uses: umitseremet/github-actions-test/.github/workflows/reusable.yaml@main
+    with:
+        var1: "Halit Seremet"
    
