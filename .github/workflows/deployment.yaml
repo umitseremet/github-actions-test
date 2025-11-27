@@ -41,4 +41,17 @@ jobs:
       - name: ActionForCodeCheckOut
         uses: umitseremet/github-actions-test/.github/actions/action2@main
       - name: "AfterAction2"
-        uses: umitseremet/github-actions-test/.github/actions/action1@main  
+        uses: umitseremet/github-actions-test/.github/actions/action1@main
+
+
+  job4:
+    name: job4
+    needs: job3
+    runs-on: ubuntu-latest
+    steps:
+      - name: CodeCheckOut
+        uses: actions/checkout@v4
+      - name: ActionForCodeCheckOut
+        uses: ./.github/workflows/actions/action1.yaml
+      - name: "AfterAction2"
+        uses: ./.github/workflows/actions/action2.yaml     
