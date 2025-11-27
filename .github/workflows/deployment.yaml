@@ -47,11 +47,10 @@ jobs:
   job4:
     name: job4
     needs: job3
-    runs-on: ubuntu-latest
-    steps:
-      - name: CodeCheckOut
-        uses: actions/checkout@v4
-      - name: ActionForCodeCheckOut
-        uses: ./.github/workflows/actions/action1.yaml
-      - name: "AfterAction2"
-        uses: ./.github/workflows/actions/action2.yaml     
+    uses: ./.github/workflows/actions/action1.yaml
+
+  job5:
+    name: job4
+    needs: job4
+    uses: ./.github/workflows/actions/action2.yaml
+   
