@@ -4,14 +4,17 @@ runs:
   using: "composite"
   steps:
       - name: ListFiles
+        shell: bash
         run: |
           df -h
           pwd
           ls -al
       - name: Command
+        shell: bash
         run: |
           echo "Any command to test"
       - name: UptimeVeersionDetect
+        shell: bash
         run: |
           uptime
           uname -a
