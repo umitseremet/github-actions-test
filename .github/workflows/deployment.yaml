@@ -47,10 +47,10 @@ jobs:
   job4:
     name: job4
     needs: job3
-    uses: ./.github/workflows/actions/action1.yaml
+    uses: umitseremet/github-actions-test/.github/workflows/reusable.yaml@main
 
   job5:
     name: job5
     needs: job4
-    uses: ./.github/workflows/actions/action2.yaml
+    uses: umitseremet/github-actions-test/.github/workflows/reusable.yaml@main
    
