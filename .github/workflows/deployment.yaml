@@ -1,0 +1,42 @@
+name: Deployment Workflow
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  job1:
+    name: job1
+    runs-on: ubuntu-latest
+    steps: 
+      - name: CodeCheckOut
+        uses: actions/checkout@v2
+      - name: ListFiles
+        run: |
+          df -h
+          pwd
+          ls -al
+      - name: Command
+        run: |
+          echo "Any command to test"
+      - name: UptimeVeersionDetect
+        run: |
+          uptime
+          uname -a    
+
+  job2:
+    name: job2
+    needs: job1
+    uses: ./.github/workflows/reusable.yaml
+    with:
+        var: "Umit Seremet"
+  job3:
+    name: job3
+    runs-on: ubuntu-latest
+    steps:
+      - name: "BeforeAction1"
+        run: echo  "BeforeAction"
+      - name: ActionForCodeCheckOut
+        uses: umitseremet/github-actions-test/.github/actions/action1@main
+      - name: "AfterAction1"
+        uses: umitseremet/github-actions-test/.github/actions/action2@main  

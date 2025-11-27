@@ -1,0 +1,19 @@
+name: 'Action1'
+description: 'Description for Action1'
+runs:
+  using: "composite"
+  steps:
+      - name: ListFiles
+        run: |
+          df -h
+          pwd
+          ls -al
+      - name: Command
+        run: |
+          echo "Any command to test"
+      - name: UptimeVeersionDetect
+        run: |
+          uptime
+          uname -a
+          echo "This is Action1"
+

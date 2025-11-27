@@ -1,0 +1,20 @@
+name: 'Action2'
+description: 'Description for Action2'
+runs:
+  using: "composite"
+  steps:
+      - name: CodeCheckOut
+        uses: actions/checkout@v2
+      - name: ListFiles
+        run: |
+          df -h
+          pwd
+          ls -al
+      - name: Command
+        run: |
+          echo "Any command to test"
+      - name: UptimeVeersionDetect
+        run: |
+          uptime
+          uname -a
+          echo "This is Action2"
