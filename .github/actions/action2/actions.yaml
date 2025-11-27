@@ -3,8 +3,6 @@ description: 'Description for Action2'
 runs:
   using: "composite"
   steps:
-      - name: CodeCheckOut
-        uses: actions/checkout@v2
       - name: ListFiles
         run: |
           df -h
